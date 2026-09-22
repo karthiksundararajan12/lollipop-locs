@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fff7f4;
+  --foreground: #2c2433;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background: #ffd166;
+  color: #2c2433;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
