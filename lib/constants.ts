@@ -1,154 +1,222 @@
-export const WHATSAPP_URL =
-  "https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment";
+export const PHONE_DISPLAY = "+91 XXXXX XXXXX";
+export const PHONE_TEL = "tel:+91XXXXXXXXXX";
 
-export const INSTAGRAM_URL = "https://instagram.com/lollipoplocs";
+export const WHATSAPP_MESSAGE =
+  "Hi Lollipop Locs! I'd like to book a kids haircut at your Electronic City salon.";
+
+export const WHATSAPP_URL = `https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(
+  WHATSAPP_MESSAGE,
+)}`;
+
+export const MAPS_DIRECTIONS_URL =
+  "https://www.google.com/maps/dir/?api=1&destination=Lollipop+Locs+Electronic+City+Bengaluru";
+
+export const GOOGLE_REVIEWS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Lollipop+Locs+Electronic+City+Bengaluru";
+
+export const SOCIAL = {
+  instagram: "https://instagram.com/lollipoplocs",
+  facebook: "https://facebook.com/lollipoplocs",
+  youtube: "https://youtube.com/@lollipoplocs",
+} as const;
 
 export const ADDRESS = {
   line1: "Electronic City Phase 1",
-  line2: "Anekal Taluk, Bengaluru 560105",
-  full: "Electronic City Phase 1, Anekal Taluk, Bengaluru 560105",
+  line2: "Near Infosys Campus, Bengaluru 560100",
+  full: "Electronic City Phase 1, Near Infosys Campus, Bengaluru 560100",
 };
 
-export const HOURS = "Daily 8:00 AM – 10:00 PM";
-
-export const MAPS_EMBED_SRC =
-  "https://maps.google.com/maps?q=Electronic+City+Phase+1,+Anekal+Taluk,+Bengaluru+560105&t=&z=15&ie=UTF8&iwloc=&output=embed";
-
-export const MAPS_DIRECTIONS_URL =
-  "https://www.google.com/maps/dir/?api=1&destination=Electronic+City+Phase+1,+Anekal+Taluk,+Bengaluru+560105";
+export const HOURS = [
+  { days: "Mon – Fri", time: "10:30 AM – 8:00 PM" },
+  { days: "Sat – Sun", time: "10:00 AM – 9:00 PM" },
+] as const;
 
 export const NAV_LINKS = [
-  { href: "#services", label: "Services" },
-  { href: "#gallery", label: "Gallery" },
+  { href: "#why-us", label: "Why Us" },
+  { href: "#experience", label: "Our Experience" },
+  { href: "#pricing", label: "Pricing" },
   { href: "#reviews", label: "Reviews" },
-  { href: "#location", label: "Location" },
+  { href: "#faqs", label: "FAQs" },
+  { href: "#visit", label: "Visit Us" },
 ] as const;
 
-export const SERVICES = [
-  {
-    name: "Home Service Mundan",
-    price: "₹3000",
-    duration: "15 min",
-    description: "A gentle, traditional first tonsure — we come to you.",
-    icon: "Home" as const,
+export const IMAGES = {
+  hero: {
+    src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1400&q=80",
+    alt: "Happy toddler smiling in a bright, playful salon setting at Lollipop Locs",
   },
-  {
-    name: "Kids Haircut",
-    price: "₹499",
-    duration: "30 min",
-    description: "Soft, camera-ready trims without the salon fuss.",
-    icon: "Scissors" as const,
+  reassurance: {
+    src: "https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&w=1400&q=80",
+    alt: "Relaxed parent sitting with a young child, the way families settle in at Lollipop Locs",
   },
-  {
-    name: "Hair Spa",
-    price: "₹899",
-    duration: "45 min",
-    description: "A quiet, nourishing treat for tangled little manes.",
-    icon: "Sparkles" as const,
+  combo: {
+    src: "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=1200&q=80",
+    alt: "Parent and child together, ready for a parent-plus-child haircut combo",
   },
-  {
-    name: "First Haircut Ceremony",
-    price: "₹2,499",
-    duration: "45 min",
-    description: "A keepsake moment with calm hands and a tiny celebration.",
-    icon: "Baby" as const,
+  firstHaircut: {
+    src: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1400&q=80",
+    alt: "Sleeping baby — a first haircut milestone waiting to be celebrated",
   },
-] as const;
-
-export const FEATURES = [
-  {
-    title: "Gentle & Patient Stylists",
-    description:
-      "No rushing, no raised voices. Our team is trained to work at a child’s pace — snacks, stories, and extra time included.",
-    icon: "HeartHandshake" as const,
+  storefront: {
+    src: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1400&q=80",
+    alt: "Bright salon interior standing in for the Lollipop Locs Electronic City storefront",
   },
-  {
-    title: "Hygienic & Safe Products",
-    description:
-      "Tear-free formulas, sterilized tools, and salon-grade hygiene. Premium care without adult-salon harshness.",
-    icon: "ShieldCheck" as const,
+  finalCta: {
+    src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1600&q=80",
+    alt: "Joyful child with a bright smile after a haircut",
   },
-  {
-    title: "Fun Distraction-Free Experience",
-    description:
-      "Screens stay optional. Soft lighting, pastel nooks, and quiet play keep little ones settled — not overstimulated.",
-    icon: "Sparkles" as const,
-  },
-  {
-    title: "Home Service Available",
-    description:
-      "Mundans and first cuts at your doorstep across Electronic City. Same gentle team, zero travel tantrums.",
-    icon: "Home" as const,
-  },
-] as const;
+} as const;
 
 export const GALLERY = [
   {
-    src: "https://images.unsplash.com/photo-1624272949900-9ae4c56397e8?auto=format&fit=crop&w=900&q=80",
-    alt: "Smiling young girl with a fresh, softly layered haircut",
-    tall: true,
+    src: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=900&q=80",
+    alt: "Colourful candy-shop interior standing in for the Lollipop Locs candyland salon",
+    caption: "A Candyland Experience",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80",
+    alt: "Red sports car used as a placeholder for the kids car haircut chair",
+    caption: "Car Chair",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1535572290543-960a8046f5af?auto=format&fit=crop&w=900&q=80",
+    alt: "Pastel unicorn toy standing in for the unicorn themed haircut chair",
+    caption: "Unicorn Chair",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80",
+    alt: "Airplane in the sky standing in for the airplane themed haircut chair",
+    caption: "Airplane Chair",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=900&q=80",
+    alt: "Young boy with a neat, freshly finished kids haircut",
+    caption: "Boys Haircuts",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?auto=format&fit=crop&w=900&q=80",
+    alt: "Stylist carefully cutting hair — placeholder for girls haircuts at the salon",
+    caption: "Girls Haircuts",
   },
   {
     src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=80",
-    alt: "Sunlit salon interior with pastel chairs and warm wood accents",
-    tall: false,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80",
-    alt: "Happy toddler laughing during a gentle salon visit",
-    tall: false,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=900&q=80",
-    alt: "Clean, modern salon stations ready for a kids appointment",
-    tall: true,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1552873816-636e43209957?auto=format&fit=crop&w=900&q=80",
-    alt: "Smiling boy with a neat kids haircut",
-    tall: false,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80",
-    alt: "Stylist carefully cutting hair in a bright, welcoming salon",
-    tall: false,
+    alt: "Sunlit salon stations showing the finish of a kids haircut transformation",
+    caption: "Before & After",
   },
 ] as const;
+
+export const TRUST_ITEMS = [
+  {
+    title: "Patient Kids' Stylists",
+    description: "Trained to work at your child's pace — extra time is built in.",
+    icon: "HeartHandshake" as const,
+    tone: "blue" as const,
+  },
+  {
+    title: "Themed Chairs",
+    description: "Unicorn, car, and airplane seats that turn a trim into an adventure.",
+    icon: "Armchair" as const,
+    tone: "peach" as const,
+  },
+  {
+    title: "Toys & Distractions",
+    description: "Gentle toys and screens so little heads stay happily still.",
+    icon: "Puzzle" as const,
+    tone: "lavender" as const,
+  },
+  {
+    title: "Play Area",
+    description: "A dedicated corner to explore before they ever sit down.",
+    icon: "Gamepad2" as const,
+    tone: "mint" as const,
+  },
+  {
+    title: "Kid-Friendly Products",
+    description: "Tear-free formulas and gentle products made for young scalps.",
+    icon: "Sparkles" as const,
+    tone: "lemon" as const,
+  },
+] as const;
+
+export const HERO_TRUST = [
+  { label: "Patient Stylists", icon: "HeartHandshake" as const },
+  { label: "Themed Chairs", icon: "Armchair" as const },
+  { label: "Play Area", icon: "Gamepad2" as const },
+  { label: "Kid-Friendly Products", icon: "Sparkles" as const },
+] as const;
+
+export const PRICING = {
+  kids: [
+    {
+      title: "Boys",
+      items: [
+        { name: "Haircut", price: "₹899" },
+        { name: "Haircut & Wash", price: "₹1,199" },
+      ],
+    },
+    {
+      title: "Girls",
+      items: [
+        { name: "Haircut", price: "₹999" },
+        { name: "Haircut & Wash", price: "₹1,399" },
+      ],
+    },
+  ],
+  combos: [
+    { name: "Dad + Son", price: "₹1,799" },
+    { name: "Mom + Son", price: "₹1,899" },
+    { name: "Dad + Daughter", price: "₹1,899" },
+    { name: "Mom + Daughter", price: "₹1,999" },
+  ],
+} as const;
 
 export const TESTIMONIALS = [
   {
+    name: "Meera R.",
     quote:
-      "Got my daughter's officially first haircut done here. Very happy with the makeover.",
-    name: "Priya S.",
-    detail: "First haircut · Electronic City",
-    rating: 5,
+      "My 3-year-old lasted a full haircut for the first time. The unicorn chair and the stylist's patience made all the difference.",
   },
   {
+    name: "Arjun P.",
     quote:
-      "Great concept. Finally a salon that doesn’t treat kids like an afterthought — calm, pretty, and actually patient.",
-    name: "Rahul M.",
-    detail: "Kids haircut · Parent of two",
-    rating: 5,
+      "We live in Electronic City and finally found a kids salon that doesn't rush. He played first, then sat happily.",
   },
   {
+    name: "Sneha K.",
     quote:
-      "Ya I liked very much, my kid loved the hairstyle. We’ll definitely be back.",
-    name: "Ananya K.",
-    detail: "Tween styling",
-    rating: 5,
-  },
-  {
-    quote:
-      "Home mundan was so smooth. They arrived on time, kept everything hygienic, and my son barely noticed it was over.",
-    name: "Vikram R.",
-    detail: "Home service mundan",
-    rating: 5,
+      "Brought a reference photo for my daughter's layers — they nailed it. She hasn't stopped looking in the mirror.",
   },
 ] as const;
 
-export const STATS = [
-  { label: "Google rating", value: "5.0★", icon: "Star" as const },
-  { label: "Happy families", value: "11+", icon: "Users" as const },
-  { label: "Open since", value: "2024", icon: "Sparkles" as const },
-  { label: "Open daily", value: "8 AM–10 PM", icon: "Clock" as const },
+export const FAQS = [
+  {
+    question: "What if my child starts crying during the haircut?",
+    answer:
+      "That's completely normal — and we never force a cut. We pause, play, and try again when they're ready. Many kids settle after exploring the chairs and the play area first.",
+  },
+  {
+    question: "Do you cut hair for babies and first haircuts?",
+    answer:
+      "Yes. First haircuts are one of the moments we're built for. Extra time is reserved, parents stay close, and you can add a personalised First Haircut Certificate for ₹899.",
+  },
+  {
+    question: "Can I stay beside my child during the haircut?",
+    answer:
+      "Always. Sit right next to them — no glass partitions, no waiting outside. Your presence is part of how we keep little ones comfortable.",
+  },
+  {
+    question: "Can my child choose a themed chair?",
+    answer:
+      "Yes — unicorn, car, or airplane, subject to availability. Mention a preference when you book on WhatsApp and we'll do our best to hold it.",
+  },
+  {
+    question: "Can I bring a reference photo of the haircut I want?",
+    answer:
+      "Please do. WhatsApp it ahead of your visit or show us in the salon. Cute salon, serious haircuts — we work from the photo you love.",
+  },
+  {
+    question: "Do I need an appointment?",
+    answer:
+      "Walk-ins are welcome when a chair is free, but we strongly recommend booking on WhatsApp. That way we can hold a themed chair and extra time for your child.",
+  },
 ] as const;

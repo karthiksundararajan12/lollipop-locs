@@ -2,13 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #fff7f4;
-  --foreground: #2c2433;
-}
-
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -18,18 +14,67 @@ html {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: #1e2a4a;
+  background: #fff3f7;
   font-family: var(--font-body), system-ui, sans-serif;
 }
 
 ::selection {
-  background: #ffd166;
-  color: #2c2433;
+  background: #fbcfe8;
+  color: #1e2a4a;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold tracking-tight transition duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-whatsapp {
+    @apply btn text-white shadow-soft hover:brightness-110;
+    background-color: #25d366;
+  }
+
+  .btn-pink {
+    @apply btn text-white shadow-soft;
+    background-color: #ec4899;
+  }
+
+  .btn-pink:hover {
+    background-color: #db2777;
+  }
+
+  .btn-pink-outline {
+    @apply btn border-2 bg-white;
+    border-color: #ec4899;
+    color: #ec4899;
+  }
+
+  .btn-pink-outline:hover {
+    background-color: #ec4899;
+    color: #fff;
+  }
+
+  .btn-navy {
+    @apply btn text-white;
+    background-color: #1e2a4a;
+  }
+
+  .btn-navy:hover {
+    background-color: #162038;
   }
 }

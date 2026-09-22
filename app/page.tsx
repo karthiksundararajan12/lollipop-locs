@@ -1,13 +1,16 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { TrustBar } from "@/components/TrustBar";
-import { Services } from "@/components/Services";
-import { WhyUs } from "@/components/WhyUs";
-import { Gallery } from "@/components/Gallery";
+import { TrustGrid } from "@/components/TrustGrid";
+import { ReassuranceSplit } from "@/components/ReassuranceSplit";
+import { ExperienceGallery } from "@/components/ExperienceGallery";
+import { Pricing } from "@/components/Pricing";
+import { FirstHaircut } from "@/components/FirstHaircut";
 import { Testimonials } from "@/components/Testimonials";
-import { Location } from "@/components/Location";
-import { CTA } from "@/components/CTA";
+import { FAQ } from "@/components/FAQ";
+import { VisitUs } from "@/components/VisitUs";
+import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
+import { StickyMobileBar } from "@/components/StickyMobileBar";
 
 export default function HomePage() {
   return (
@@ -15,15 +18,18 @@ export default function HomePage() {
       <Navbar />
       <main id="main">
         <Hero />
-        <TrustBar />
-        <Services />
-        <WhyUs />
-        <Gallery />
+        <TrustGrid />
+        <ReassuranceSplit />
+        <ExperienceGallery />
+        <Pricing />
+        <FirstHaircut />
         <Testimonials />
-        <Location />
-        <CTA />
+        <FAQ />
+        <VisitUs />
+        <FinalCTA />
       </main>
       <Footer />
+      <StickyMobileBar />
     </div>
   );
 }

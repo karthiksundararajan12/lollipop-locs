@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Fredoka, Inter } from "next/font/google";
+import { Baloo_2, Inter } from "next/font/google";
 import "./globals.css";
 
-const fredoka = Fredoka({
+const baloo = Baloo_2({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const inter = Inter({
@@ -16,14 +16,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Lollipop Locs | Premium Kids & Tweens Salon, Electronic City",
+  title: "Lollipop Locs | Kids Haircut in Electronic City, Bangalore",
   description:
-    "Bengaluru’s favorite salon for little ones. Gentle haircuts, first-cut ceremonies, hair spa, and home mundan in Electronic City Phase 1.",
+    "A happier haircut experience, designed around kids. Premium kids & tweens salon in Electronic City, Bengaluru — patient stylists, themed chairs, and haircuts from ₹899.",
   metadataBase: new URL("https://lollipoplocs.example"),
   openGraph: {
-    title: "Lollipop Locs — Kids & Tweens Hair Salon & Spa",
+    title: "Lollipop Locs — Premium Kids & Tweens Salon, Electronic City",
     description:
-      "A calm, candy-colored studio in Electronic City where first haircuts feel like a celebration.",
+      "Kids haircuts from ₹899. Themed chairs, a play area, and stylists who never rush. Book on WhatsApp.",
     locale: "en_IN",
     type: "website",
   },
@@ -35,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fredoka.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-cream font-body text-charcoal antialiased">
+    <html lang="en" className={`${baloo.variable} ${inter.variable}`}>
+      <body className="min-h-screen bg-blush font-body text-navy antialiased">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:shadow-soft"

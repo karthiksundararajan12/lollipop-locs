@@ -8,29 +8,33 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        candy: "#FF6FA5",
-        lollipop: "#8B5CF6",
-        sunny: "#FFD166",
-        charcoal: "#2C2433",
-        cream: "#FFF7F4",
-        blush: "#FFE8F0",
-        mist: "#F4EEFF",
-        whatsapp: "#1FBE5A",
+        blush: "#FFF3F7",
+        accent: {
+          DEFAULT: "#EC4899",
+          dark: "#DB2777",
+        },
+        navy: "#1E2A4A",
+        muted: "#4B5563",
+        whatsapp: "#25D366",
+        pastel: {
+          blue: "#D6EEFF",
+          peach: "#FFE0C8",
+          lavender: "#E6DEFF",
+          mint: "#D1F5E8",
+          lemon: "#FFF1C4",
+        },
       },
       fontFamily: {
         display: ["var(--font-display)", "system-ui", "sans-serif"],
         body: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        soft: "0 12px 40px -16px rgba(139, 92, 246, 0.22)",
-        card: "0 8px 28px -14px rgba(44, 36, 51, 0.16)",
-        lift: "0 22px 50px -18px rgba(255, 111, 165, 0.35)",
+        soft: "0 10px 30px -12px rgba(236, 72, 153, 0.28)",
+        card: "0 12px 32px -16px rgba(30, 42, 74, 0.16)",
+        lift: "0 20px 44px -18px rgba(219, 39, 119, 0.38)",
       },
-      backgroundImage: {
-        "brand-gradient":
-          "linear-gradient(135deg, #FF6FA5 0%, #8B5CF6 52%, #FFD166 130%)",
-        "hero-wash":
-          "radial-gradient(ellipse 80% 60% at 10% 0%, rgba(255,111,165,0.28), transparent 55%), radial-gradient(ellipse 70% 50% at 95% 10%, rgba(139,92,246,0.22), transparent 50%), radial-gradient(ellipse 50% 40% at 50% 100%, rgba(255,209,102,0.2), transparent 50%)",
+      borderRadius: {
+        "4xl": "2rem",
       },
     },
   },
